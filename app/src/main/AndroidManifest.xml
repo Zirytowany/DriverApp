@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="eu.mobileApp.DriverApp">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GetSetDB"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name="eu.mobileApp.DriverApp.WebMenuScreen"
+            android:exported="false" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.AnkietyScreen"
+            android:exported="false" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.UrlopyScreen"
+            android:exported="false" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.DepartureScreen"
+            android:exported="false" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.AppParamsScreen"
+            android:exported="false" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.orders.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.mapa.MapScreen"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <receiver
+            android:name="eu.mobileApp.DriverApp.alerts.ScreenReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="eu.mobileApp.DriverApp.alerts.SendSMS"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location" />
+        <service
+            android:name="eu.mobileApp.DriverApp.alerts.LocationUpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="eu.mobileApp.DriverApp.login.Register"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.MainScreen"
+            android:exported="true"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true" />
+        <!--
+android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            />
+        -->
+        <activity
+            android:name="eu.mobileApp.DriverApp.login.LogInScreen"
+            android:exported="false"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="eu.mobileApp.DriverApp.StartingScreen"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="eu.mobileApp.DriverApp.comm.ServiceBG"
+            android:foregroundServiceType="location" />
+    </application>
+
+</manifest>

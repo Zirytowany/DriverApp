@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UrlopyScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <!--
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="invisible"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="invisible"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit0"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="10dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="10dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit4"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit5"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit6"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit7"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit8"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit9"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit10"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit11"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit12"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit13"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit14"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit15"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit16"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit17"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/urlopLayout18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/absenceTV18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Czy potwierdzasz złożenie wniosku\n o urlop wypoczynkowy w dniach:"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/absenceDate18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textSize="15sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/confirmBTN18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green"
+                            android:text="Potwierdzam" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/rejectBTN18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/red"
+                            android:text="Odrzucam" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/absenceEdit18"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:hint="Uzasadnienij czemu odrzucasz"
+                        android:inputType="textPersonName"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white"
+                        />
+
+                    <Button
+                        android:id="@+id/commentBTN18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_500"
+                        android:text="Zapisz"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+            </TableRow>
+
+
+
+        </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="Odśwież"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.919"
+            android:id="@+id/confirm"
+            />
+
+        <TextView
+            android:id="@+id/noLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Proszę się najpierw zalogować"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</ScrollView>

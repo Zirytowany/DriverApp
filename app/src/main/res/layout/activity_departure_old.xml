@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DepartureScreen"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal|top"
+        >
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentRow"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/commentDt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/departureRow"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/departureTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data wyjazdu z bazy: "
+                        android:gravity="center"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/departure_dateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Proszę o uzupełnienie daty wyjazdu z bazy"
+                        android:textSize="17sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_500"
+                    android:text="Wypełnij datę wyjazdu"
+                    android:id="@+id/departureBTN"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/departureConfirmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/planedArrivalDateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/planedArrivalDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/arrivalRow"
+            android:visibility="visible"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/arrivalTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data przyjazdu: "
+                        android:gravity="center"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/arrival_dateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Proszę uzupełnić datę przyjazdu"
+                        android:textSize="17sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_500"
+                    android:text="Wypełnij datę przyjazdu"
+                    android:id="@+id/arrivalBTN"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/nextDeparturePlan"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/nextDepart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+    </TableLayout>
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="Zatwierdź zmiany"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        android:id="@+id/confirm"
+        />
+
+        <TextView
+            android:id="@+id/noLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Brak wniosków w bazie"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</ScrollView>

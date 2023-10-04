@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DirverApp</string>
+    <string name="latLong">location</string>
+</resources>

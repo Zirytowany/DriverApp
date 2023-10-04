@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+            .auto_height{
+                width:50%;
+            }
+        </style>
+</head>
+<body>
+<div id="main">
+    <p>Brak wniosków w bazie</p>
+</div>
+</br>
+<div id="commentDiv">
+</div>
+</br>
+<input type="button" value="Odśwież" onclick="getData()">
+<script>
+            const queryString=window.location.search
+            let params=queryString.split("?")
+            //let aid=params[2];
+            let crewID=params[1];
+            let absenceID="";
+            let comment="";
+
+
+            let absenceJsonStr=`
+            {
+                "ID": "123" ,
+                "DateForm": "2023-05-06",
+                "DateTo": "2023-05-10",
+                "AbsenceDays": "3",
+                "Info": null,
+                "StatusID": 3,
+                "Status": "zarejestrowany"
+            }
+            `;
+
+
+            getData();
+
+
+            function auto_height(elem){
+                elem.style.height = '1px';
+                elem.style.height = `${elem.scrollHeight}px`;
+            }
+
+
+            let resp=""
+            //document.getElementById("data").innerHTML=params.toString();
+            function reject(){
+                document.getElementById("commentDiv").innerHTML=`
+                <textarea rows="1" class="auto_height" id="comment" onInput="auto_height(this)" placeholder="Uzasadnij czemu odrzucasz"></textarea>
+                </br>
+                </br>
+                <input type="button" value="Zapisz" onclick="save()">`;
+            }
+
+
+            function accept(){
+                putData()
+                getData()
+            }
+
+
+            function save(){
+                comment=document.getElementById("comment").text;
+                putData()
+                getData()
+            }
+
+                //console.log(resp);
+                //resp="1";
+                if(resp!="" && resp!=null){
+                    if(resp.includes("[") && resp.includes("]")){
+
+
+
+                    }else{
+                    document.getElementById("main").innerHTML=`
+                    <p>
+                        Czy potwierdzasz złożenie wniosku o urlop wypoczynkowy w dniach:
+                    </p>
+                    <p id="data">
+                    </p>
+                    <input type="button" value="Potwierdzam" onclick="accept()">
+                    <input type="button" value="Odrzucam" onclick="reject()">
+                    </br>
+                    `;
+                    //document.getElementById("data").innerHTML=resp.toString();
+                    let absenceJson=JSON.parse(absenceJsonStr);
+                    document.getElementById("data").innerHTML=absenceJson.DateForm+" - "+absenceJson.DateTo
+                    absenceID=absenceJson.ID
+                    }
+                }
+
+
+                function getData(){
+                    fetch(
+                    "url_address"+crewID,{
+                            headers:{
+                                "token": "token_value",
+                                "X-Requested-With": "XMLHttpRequest",
+                                "Access-Control-Allow-Origin": "*"
+                        },
+                            method: "GET",
+                            mode: "cors",
+                            credentials: "include"
+                    })
+                    .then(response=>response.text())
+                    .then(text=>resp=text)
+                    .catch((error)=> console.error(error))
+                }
+
+
+                function putData(){
+                    let status=0
+                    if(comment!=""){
+                        status=-2;
+                    }else{
+                        status=2;
+                    }
+
+
+                fetch(
+                    "url_address",{
+                            headers:{
+                                "token": "token_value",
+                                "X-Requested-With": "XMLHttpRequest",
+                                "Access-Control-Allow-Origin": "*"
+                        },
+                            method: "PUT",
+                            body: JSON.stringify({
+                                "AbsenceID": absenceID,
+                                "CrewID": crewID,
+                                "Status": String(status),
+                                "Comment": comment
+                            })
+                    }
+                )
+                }
+
+
+
+        </script>
+</body>
+</html>

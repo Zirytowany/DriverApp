@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GetSetDB" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:backgroundTint">#424242</item>
+        <item name="android:background">#424242</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!--<item name="android:backgroundTint">#8d8d8d</item>-->
+        <!--<item name="android:background">#000000</item>-->
+    </style>
+
+    <style name="Button.Alert" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">#F30000</item>
+    </style>
+
+    <style name="MyActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:background">#9e9e9e</item>
+    </style>
+</resources>

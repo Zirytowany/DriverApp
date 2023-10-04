@@ -1,0 +1,219 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div id="universal">
+</div>
+<div id="universalDate">
+</div>
+</br>
+<div id="departure">
+</div>
+<div id="departurePicker">
+</div>
+</br>
+<div id="arrival">
+</div>
+<div id="arrivalPicker">
+</div>
+</br>
+<div id="save">
+    <input id="saveButton" type="button" value="Zapisz zmiany" onclick="save()">
+</div>
+<script>
+
+
+            const queryString=window.location.search
+            let params=queryString.split("?")
+            let driverID=params[1];
+            let crewID=params[2];
+            let roadCardID="";
+            let arrivalDt="";
+            let departureDt="";
+
+
+            let departJsonStr=``;
+
+
+
+
+            getData();
+
+
+            if(departJsonStr.includes("RoadCardID")){
+
+
+                let departJson=JSON.parse(departJsonStr);
+                roadCardID= departJson.RoadCardID
+                document.getElementById("universal").innerHTML=departJson.DepartureArrivalComment
+                document.getElementById("universalDate").innerHTML=departJson.DepartureArrivalCommentDT
+
+
+                if(departJson.DepartureDt!="" || departJson.DepartureDt!=null){
+                    if(departJson.DriverDepartureDt=="" || departJson.DriverDepartureDt==null){
+                        document.getElementById("departurePicker").innerHTML=`<input
+                        type="datetime-local"
+                        id="departure-time"
+                        name="departure"
+                        value=${new Date()}
+                        min=${new Date()}
+                        />`;
+                        document.getElementById("departure").innerHTML=departJson.DepartureComment;
+                        let button=document.getElementById("saveButton");
+                        if(button.style.visibility!="visible"){
+                            button.style.display="visible";
+                        }
+                        document.getElementById("arrival").innerHTML="";
+                        document.getElementById("arrivalPicker").innerHTML="";
+                    }
+
+
+                    if(departJson.DriverDepartureDt!="" || departJson.DriverDepartureDt!=null){
+                        document.getElementById("departure").innerHTML="";
+                        document.getElementById("departurePicker").innerHTML="";
+                        document.getElementById("arrival").innerHTML="";
+                        document.getElementById("arrivalPicker").innerHTML="";
+                    }
+
+
+                    if(departJson.ArrivalDt!="" || departJson.ArrivalDt!=null){
+                        if(departJson.DriverArrivalDt=="" || departJson.DriverArrivalDt==null){
+                            document.getElementById("arrivalPicker").innerHTML=`<input
+                                type="datetime-local"
+                                id="arrival-time"
+                                name="arrival"
+                                value=${new Date()}
+                            />`;
+                            document.getElementById("arrival").innerHTML=departJson.ArrivalComment;
+                        }
+                    } else if(departJson.ArrivalDt=="" || departJson.ArrivalDt==null){
+                        document.getElementById("arrival").innerHTML="";
+                        document.getElementById("arrivalPicker").innerHTML="";
+                    }
+
+
+                    if((departJson.PlanArrivalDt!="" || departJson.PlanArrivalDt!=null) && (departJson.ArrivalDt!="" || departJson.ArrivalDt!=null)){
+                        document.getElementById("universal").innerHTML=departJson.DepartureArrivalComment;
+                        document.getElementById("universalDate").innerHTML=departJson.DepartureArrivalCommentDT;
+                    }
+
+                    if(departJson.NextDepartureDTPlan!="" || departJson.NextDepartureDTPlan!=null){
+                        document.getElementById("universal").innerHTML=departJson.DepartureArrivalComment;
+                        document.getElementById("universalDate").innerHTML=departJson.DepartureArrivalCommentDT;
+                        let button=document.getElementById("saveButton");
+                        if(button.style.visibility=="visible"){
+                            button.style.display="hidden";
+                        }else{
+                            button.style.display="visible";
+                        }
+                    }
+
+                    if(departJson.DepartureArrivalComment!="" || departJson.DepartureArrivalComment!=null){
+
+
+                    }
+
+
+                }else{
+                    document.getElementById("universal").innerHTML="Brak wniosków w bazie";
+                    document.getElementById("universalDate").innerHTML="";
+                    document.getElementById("departure").innerHTML="";
+                    document.getElementById("departurePicker").innerHTML="";
+                    document.getElementById("arrival").innerHTML="";
+                    document.getElementById("arrivalPicker").innerHTML="";
+                    let button=document.getElementById("saveButton");
+                    if(button.style.visibility=="visible"){
+                        button.style.display="hidden";
+                    }else{
+                        button.style.display="visible";
+                    }
+
+
+                }
+            }
+
+
+            async function getData(){
+                fetch(
+                    "url_address"+crewID,{
+                            headers:{
+                                "token": "token_value",
+                                "X-Requested-With": "XMLHttpRequest",
+                                "Access-Control-Allow-Origin": "*"
+                        },
+                            method: "GET",
+                            mode: "cors",
+                            credentials: "include"
+                    }
+                )
+                .then(response=>response.JSON)
+                .then(data=>departJsonStr=String(data))
+                .catch((error)=> console.error(error))
+
+
+                console.log("response.text: "+departJsonStr)
+
+
+                /*const xhr = new XMLHttpRequest();
+                xhr.open("GET", "url_address"+crewID);
+                xhr.setRequestHeader("token", "token_value");
+                xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                xhr.send();
+                xhr.responseType="text";
+                xhr.onload = () => {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        console.log(xhr.response);
+                    } else {
+                        console.log(`Error: ${xhr.status}`);
+                    }
+                };*/
+            }
+
+
+           function putData(){
+                fetch(
+                    "url_address",{
+                            headers:{
+                                'token': 'token_value',
+                                "X-Requested-With": "XMLHttpRequest",
+                                "Access-Control-Allow-Origin": "*"
+                        },
+                            method: "PUT",
+                            mode: "cors",
+                            credentials: "include",
+                            body: JSON.stringify({
+                                "CreID": crewID,
+                                "RoadCardID": roadCardID,
+                                "DriverArrivalDt": arrivalDt,
+                                "DriverDepartureDt": departureDt
+                            })
+                    }
+                )
+            }
+
+
+            function save(){
+                if(document.getElementById("departurePicker").innerHTML!=""){
+                    departureDt=String(document.getElementById("departure-time").value);
+                    departureDt=departureDt.replace("T", " ");
+                    //document.getElementById("universal").innerHTML=departureDt;
+                }
+
+
+                if(document.getElementById("arrivalPicker").innerHTML!=""){
+                    arrivalDt=String(document.getElementById("arrival-time").value);
+                    arrivalDt=arrivalDt.replace("T", " ");
+                    //document.getElementById("universal").innerHTML=arrivalDt;
+                }
+
+
+                putData();
+                getData();
+            }
+
+
+        </script>
+</body>
+</html>

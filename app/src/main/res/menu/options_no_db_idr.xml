@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:title="home"
+        android:id="@+id/home"
+        android:onClick="onGroupItemClick"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always"/>
+
+    <item android:title=""
+        android:id="@+id/menu"
+        android:icon="@drawable/baseline_more_vert_24"
+        app:showAsAction="ifRoom">
+        <menu>
+    <group android:id="@+id/menu_group">
+        <!--<item
+            android:id="@+id/Zaloguj"
+            android:onClick="onGroupItemClick"
+            android:title="Zaloguj"
+            />
+        <item
+            android:id="@+id/Wyloguj"
+            android:onClick="onGroupItemClick"
+            android:title="Wyloguj"
+            />-->
+        <item
+            android:id="@+id/kolorki"
+            android:onClick="onGroupItemClick"
+            android:title="Zmień wygląd"/>
+        <item
+            android:id="@+id/mapa"
+            android:onClick="onGroupItemClick"
+            android:title="Wyświetl mapę"/>
+
+                <item
+                    android:id="@+id/info"
+                    android:onClick="onGroupItemClick"
+                    android:title="Informacje"
+                    />
+        <!--
+        <item
+            android:id="@+id/zamowienia"
+            android:onClick="onGroupItemClick"
+            android:title="Wyświetl zamówienia"
+            />
+
+
+        <item
+            android:id="@+id/depart"
+            android:onClick="onGroupItemClick"
+            android:title="Zjazdy i wyjazdy"
+            />
+            -->
+
+        <item
+            android:id="@+id/Zamknij"
+            android:onClick="onGroupItemClick"
+            android:title="Zamknij"/>
+
+    </group>
+    </menu>
+    </item>
+
+</menu>
